@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Aesop</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa|Ibarra+Real+Nova&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+        <style type="text/css">
+            *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+           } 
+            :root{
+                --ibarra:'Ibarra Real Nova', serif;
+                --monoespacia: 'Comfortaa', cursive;
+                --crema: #FFFEF3;
+            }
+            body{
+                background: var(--crema);
+            }
+            img{
+                width: 100%;
+            }
+            ul li{
+                list-style-type: none;
+            }
+            a{
+                text-decoration: none;
+            }
+            menu{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                padding: 1em;
+                
+            }
+            menu select, menu a, menu ul{
+                padding: 0 1em;
+
+            }
+            menu select{
+                border: none;
+                background: var(--crema);
+            }
+            h1{
+                width: 10%;
+                display: flex;
+                justify-content: center;
+                padding: 17em;
+            }
+            h2{
+                text-align: center;
+                font-family: var(--ibarra);
+                padding: 20em;
+            }
+            nav{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 2em 4em;
+            }
+            nav .navegation a:first-child{
+                border-bottom: 1 px solid black;
+            }
+            nav a{
+                color: black;
+                margin: 0 1em 0 0;
+            }
+            }
+            ul ul{
+                visibility: hidden;
+                position: absolute;
+                background: var(--crema);
+                padding: 1em;
+                
+            }
+            ul li:hover ul{
+                list-style-type: none;
+                visibility: inherit;
+            }
+            ul li ul li{
+                padding: 0.5em;
+                font-size: 2em;
+            }
+             ul li ul li a{
+                color: black;
+            }
+            .container{
+                display: grid;
+                grid-template: repeat(8, 130px) / repeat(5, 1fr);
+                grid-gap: 10px;
+            }
+            .container>div{
+                display: flex;
+                flex-direction: column;
+                
+            }
+            div header{
+                display: flex;
+                flex-direction: column;
+            }
+            .caja_img{
+            flex-grow: 1;
+            overflow: hidden;
+            padding: 10px 10px 0 10px;
+            }
+            .caja_img img{
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            }
+            .container header{
+                padding: 0 10px 10px 10px;
+                height: 20px;
+                text-align: center;
+            }
+            .item-1{
+                border-right: 1px solid black;
+                border-bottom: 1px solid black;
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 5;
+            }
+            .item-2{
+                border-right: 1px solid black;
+                border-bottom: 1px solid black;
+                grid-column-start: 4;
+                grid-column-end: 5;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+            .item-3{
+                align-content: center;
+                border-right: 1px solid black;
+                border-bottom: 1px solid black;
+                grid-column-start: 4;
+                grid-column-end: 5;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+            .item-4{
+                align-content: center;
+                border-right: 1px solid black;
+                border-bottom: 1px solid black;
+                grid-column-start: 5;
+                grid-column-end: 6;
+                grid-row-start: 1;
+                grid-row-end: 3;
+                
+            }
+            .item-5{
+                border-right: 1px solid black;
+                border-bottom: 1px solid black;
+                padding-top: 75px;
+                grid-column-start: 4;
+                grid-column-end: 6;
+                grid-row-start: 3;
+                grid-row-end: 5;
+            }
+            .item-6{
+                align-content: center;
+                border-right: 1px solid black;
+                border-bottom: 1px solid black;
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 5;
+                grid-row-end: 7;
+            }
+            .item-7{
+                align-content: center;
+                border-right: 1px solid black;
+                border-bottom: 1px solid black;
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 5;
+                grid-row-end: 6;
+            }
+            .item-8{
+                align-content: center;
+                border-right: 1px solid black;
+                border-bottom: 1px solid black;
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 6;
+                grid-row-end: 7;
+            }
+            .item-9{
+
+                align-content: center;
+                border-right: 1px solid black;
+                border-bottom: 1px solid black;
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 7;
+                grid-row-end: 9;
+            }
+            .item-10{
+                align-content: center;
+                border-right: 1px solid black;
+                border-bottom: 1px solid black;
+                grid-column-start: 3;
+                grid-column-end: 5;
+                grid-row-start: 5;
+                grid-row-end: 9;
+            }
+            .item-11{
+                align-content: center;
+                border-right: 1px solid black;
+                border-bottom: 1px solid black;
+                grid-column-start: 5;
+                grid-column-end: 6;
+                grid-row-start: 5;
+                grid-row-end: 9;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+           <menu>
+               <select name="language" id="idiomas">
+                   <option value"">French</option>
+                   <option value"">English</option>
+                   <option value="">Italian</option>
+               </select>
+               <a href="http://aesop.com">aesop.com</a>
+               <ul>
+                 <li>Share<i class="far fa-share-square"></i>
+                  <ul>
+                   <li><a href="#"><i class="far fa-envelope"></i></a></li>
+                   <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                   <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                   <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                   <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                  </ul>
+                </li>
+               </ul>
+           </menu>
+            <h1><img src="img/logoAesop.jpg"></h1>
+            <h2>Taxonomy of Desig</h2>
+            <nav>
+                <a href="#">Philosophy</a>
+                <div>
+                    <a href="#">All</a>
+                    <a href="#">Stores</a>
+                    <a href="#">Designers</a>
+                    <a href="#">Features</a>
+                    <a href="#">Materials</a>
+                    <a href="#">Quotes</a>
+                </div>
+                <form action="#">
+                    <input type="text" value="search">
+                    <a href="#"><i class="fas fa-search"></i></a>  
+                </form>        
+            </nav>
+        </header>
+        <main>
+           <div class="container"></div>
+            <div class="item-1">
+                <div class="caja_img">
+                    <img src="img/Foto1Aesop.jpg" alt="">
+                </div>
+                <header>
+                    <h3>Kyoto</h3>
+                    <h4>Kyoto,Japan</h4>
+                </header>
+            </div>
+            <div class="item-2">
+                <div class="caja_img">
+                    <img src="" alt="">
+                </div>
+                <header>
+                    <h3>Marble</h3>
+                    <h4>sint-sulpice,France</h4>
+                </header>
+            </div>
+            <div class="item-3">
+                <div class="caja_img">
+                    <img src="img/Foto2Aesop.jpg" alt="">
+                </div>
+                <header>
+                    <h3>waxed concrete</h3>
+                    <h4>tiquetonne, france</h4>
+                </header>
+            </div>
+            <div class="item-4">
+                <div class="caja_img">
+                    <img src="img/Foto3Aesop.jpg" alt="">
+                </div>
+                <header>
+                    <h3>shoheta</h3>
+                    <h4></h4>
+                </header>
+            </div>
+            <div class="item-5">
+                <div class="caja_img">
+                    <img src="img/Foto4Aesop.jpg" alt="">
+                </div>
+                <header>
+                    <h3>Jonh Randolph</h3>
+                    <h4></h4>
+                </header>
+            </div>
+            <div class="item-6">
+                <div class="caja_img">
+                    <img src="img/Foto5Aesop.jpg" alt="">
+                </div>
+                <header>
+                    <h3>Studio ilse</h3>
+                    <h4></h4>
+                </header>
+            </div>
+            <div class="item-7">
+                <div class="caja_img">
+                    <img src="img/Foto6Aeso.jpg" alt="">
+                </div>
+                <header>
+                    <h3>blackened steel</h3>
+                    <h4>newbury street, usa</h4>
+                </header>
+            </div>
+            <div class="item-8">
+                <div class="caja_img">
+                    <img src="img/7" alt="">
+                </div>
+                <header>
+                    <h3>sisal flooring</h3>
+                    <h4>geneva, sswitzerland</h4>
+                </header>
+            </div>
+            <div class="item-9">
+                <div class="caja_img">
+                    <img src="img/Foto8Aesop.jpg" alt="">
+                </div>
+                <header>
+                    <h3>coconut husk fringig</h3>
+                    <h4>millenia walk, singapure</h4>
+                </header>
+                <div class="item-10">
+                <div class="caja_img">
+                    <img src="img/Foto9Aesop.jpg" alt="">
+                </div>
+                <header>
+                    <h3>the paris review</h3>
+                    <h4>chelsea, usa</h4>
+                </header>
+            </div>
+            <div class="item-11">
+                <div class="caja_img">
+                    <img src="img/Foto10Aesop.jpg" alt="">
+                </div>
+                <header>
+                    <h3>Henry wilson studios</h3>
+                    <h4></h4>
+                </header>
+            </div>
+            </div>
+        </main>
+        <footer>
+        
+        </footer>
+    </body>
+</html>
